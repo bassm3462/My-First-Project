@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\userControler;
 
 
 /*
@@ -30,3 +31,8 @@ Route::resource('photos', PhotoController::class)
         ->missing(function (Request $request) {
             return Redirect::route('photos.index');
         });
+        Route::get('user/register',[userControler::class , 'register']);
+
+        Route::post('user/insert',[userControler::class , 'insert'])->name('user.insert');
+        Route::get('user/index',[userControler::class , 'display']);
+

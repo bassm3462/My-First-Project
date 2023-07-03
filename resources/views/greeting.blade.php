@@ -1,4 +1,5 @@
 Hello, {{ $name }}.
 <h1>Laravel</h1>
 
-Hello, {{ $name }}.
+Hello word, {{ $name }}.
+git
